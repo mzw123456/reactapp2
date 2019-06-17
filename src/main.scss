@@ -35,9 +35,11 @@ html, body, #root, .container {
         @include justify-content();
         @include align-items();
         @include text-color(#333);
-
         &.active {
           @include text-color(#f66);
+        }
+        span {
+          @include font-size (.24rem);
         }
       }
     }

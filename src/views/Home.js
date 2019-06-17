@@ -6,7 +6,7 @@ class App extends React.Component {
     super (props);
     this.state = {
       prolist: [],
-      bannerList: []
+      bannerList: [1,2]
     }
   }
   componentDidMount () {
