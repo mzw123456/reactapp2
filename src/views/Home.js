@@ -28,7 +28,7 @@ class App extends React.Component {
         <div className="header">头部</div>
         <div className="content">
           <Banner bannerList={ this.state.bannerList }/>
-          <Prolist prolist={ this.state.prolist }/>        
+          <Prolist prolist={ this.state.prolist } {...this.props}/>        
         </div>
       </div>
     )
