@@ -1,0 +1,28 @@
+@import '@/lib/reset.scss';
+.prolist {
+  overflow: hidden;
+  li {
+    float: left;
+    @include rect(48%, 2.67rem);
+    @include background-color(#cccccc);
+    @include margin(5px 1% 0);
+    .img {
+      @include rect(100%, 2rem);
+      img {
+        @include rect (100%, 100%);
+      }
+    }
+  }
+  .info {
+    .sroc {
+      .iconfont {
+        float: left;
+      }
+      .span {
+        font-size: .16rem;
+        @include margin(0 .04rem 0 0);
+        @include line-height(.16rem);
+      }
+    }
+  }
+}
