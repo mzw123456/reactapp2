@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel} from 'antd-mobile';
-const Com = ({bannerList}) => (
+const Com = ({bannerlist}) => (
   <Carousel
           autoplay
           infinite
@@ -8,7 +8,7 @@ const Com = ({bannerList}) => (
           // afterChange={index => console.log('slide to', index)}
           style={{ display: 'inline-block', width: '100%', height: 247 }}
         >
-          {bannerList.map((val, index) => (
+          {bannerlist.map((val, index) => (
             <a
               key={index}
               href="http://www.alipay.com"
