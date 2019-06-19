@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch, NavLink, Redirect} from 'react-router-dom'
 import Home from '@/views/home';
-import Kind from '@/views/Kind';
-import User from '@/views/User';
-import Cart from '@/views/Cart';
+import Kind from '@/views/kind';
+import User from '@/views/user';
+import Cart from '@/views/cart';
 import '@/main.scss'
 
 function App() {

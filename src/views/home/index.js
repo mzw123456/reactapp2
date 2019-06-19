@@ -1,28 +1,29 @@
 import { connect } from 'react-redux';
+import api from '@/api'
 import UI from './UI'
 
 const mapStateToProps = (state) => {
   console.log(state)
   return {
-    bannerlist: state.bannerlist,
-    prolist: state.prolist
+    bannerlist: state.home.bannerlist,
+    prolist: state.home.prolist
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
     getBannerList () {
-      fetch('http://www.daxunxun.com/banner').then(res => res.json()).then(data => {
-        console.log(data)
-        dispatch({
+      api.requestGetData('banner').then (data=> {
+        dispatch ({
           type: 'changeBannerList',
           data
         })
       })
+
     },
     getProList () {
-      fetch('http://www.daxunxun.com/douban').then(res => res.json()).then(data => {
-        dispatch({
+      api.requestGetData('douban').then (data=> {
+        dispatch ({
           type: 'changeProList',
           data
         })

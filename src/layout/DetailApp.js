@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import Detail from '@/views/Detail';
+import Detail from '@/views/detail';
 
 function DetailApp () {
     return (
