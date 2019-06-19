@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import api from '@/api'
-import UI from './UI'
+import UI from './UI';
+import action from './action'
 
 const mapStateToProps = (state) => {
   console.log(state)
@@ -12,23 +12,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getBannerList () {
-      api.requestGetData('banner').then (data=> {
-        dispatch ({
-          type: 'changeBannerList',
-          data
-        })
-      })
-
-    },
-    getProList () {
-      api.requestGetData('douban').then (data=> {
-        dispatch ({
-          type: 'changeProList',
-          data
-        })
-      })
-    }
+    getBannerList () {dispatch(action.getBannerList)},
+    getProList() {dispatch(action.getProList)}
   }
 }
 
